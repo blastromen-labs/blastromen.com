@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Blastromen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+        integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="blastro-logo-sm.png" alt="blastro-logo-sm">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDiv"
+            aria-controls="navbarDiv" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarDiv">
+            <ul class="navbar-nav mr-auto">
+                <!-- Home -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#home" onclick="window.location.href='#home'" data-toggle="collapse"
+                        aria-expanded="true" data-target=".navbar-collapse.show,#collapseHome"
+                        data-parent="#collapseMain">
+                        <i class="fas fa-home"></i> Home</a>
+                </li>
+                <!-- Bio -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#bio" onclick="window.location.href='#bio'" data-toggle="collapse"
+                        aria-expanded="false" data-target=".navbar-collapse.show,#collapseBio"
+                        data-parent="#collapseMain">
+                        <i class="fas fa-info-circle"></i> Bio</a>
+                </li>
+                <!-- Pictures -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#pics" onclick="window.location.href='#pics'" data-toggle="collapse"
+                        aria-expanded="false" data-target=".navbar-collapse.show,#collapsePictures"
+                        data-parent="#collapseMain" aria-controls="collapsePictures">
+                        <i class="fas fa-image"></i> Pics</a>
+                </li>
+                <!-- Videos -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#videos" onclick="window.location.href='#videos'" data-toggle="collapse"
+                        aria-expanded="false" data-target=".navbar-collapse.show,#collapseVideos"
+                        data-parent="#collapseMain" aria-controls="collapseVideos">
+                        <i class="fas fa-video"></i> Videos</a>
+                </li>
+                <!-- Booking -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#booking" onclick="window.location.href='#booking'" data-toggle="collapse"
+                        aria-expanded="false" data-target=".navbar-collapse.show,#collapseBooking"
+                        data-parent="#collapseMain" aria-controls="collapseBooking">
+                        <i class="fas fa-music"></i> Booking / Live Shows</a>
+                </li>
+                <!-- Releases -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#releases" onclick="window.location.href='#releases'"
+                        data-toggle="collapse" aria-expanded="false"
+                        data-target=".navbar-collapse.show,#collapseReleases" data-parent="#collapseMain"
+                        aria-controls="collapseReleases">
+                        <i class="fas fa-compact-disc"></i> Releases</a>
+                </li>
+                <!-- Studio -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#studio" onclick="window.location.href='#studio'" data-toggle="collapse"
+                        aria-expanded="false" data-target=".navbar-collapse.show,#collapseStudio"
+                        data-parent="#collapseMain" aria-controls="collapseReleases">
+                        <i class="fas fa-desktop"></i> Studio</a>
+                </li>
+                <!-- Store -->
+                <li class="nav-item">
+                    <a class="nav-link" href="shop">
+                        <i class="fas fa-shopping-cart"></i> Store</a>
+                </li>
+                <!-- Lyrics -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#lyrics" onclick="window.location.href='#lyrics'" data-toggle="collapse"
+                        aria-expanded="false" data-target=".navbar-collapse.show,#collapseLyrics"
+                        data-parent="#collapseMain" aria-controls="collapseLyrics">
+                        <i class="fas fa-pen"></i> Lyrics</a>
+                </li>
+                <!-- Press -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#press" onclick="window.location.href='#press'" data-toggle="collapse"
+                        aria-expanded="false" data-target=".navbar-collapse.show,#collapsePress"
+                        data-parent="#collapseMain" aria-controls="collapsePress">
+                        <i class="fas fa-newspaper"></i> Press</a>
+                </li>
+                <!-- Contact -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact" onclick="window.location.href='#contact'" data-toggle="collapse"
+                        aria-expanded="false" data-target=".navbar-collapse.show,#collapseContact"
+                        data-parent="#collapseMain" aria-controls="collapseContact">
+                        <i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="collapseMain">
+                    <div class="accordion-group">
+
+                        <!-- Home -->
+                        <div class="collapse show" id="collapseHome" data-parent="#collapseMain">
+                            <div class="card card-body">
+                                <h3 class="text-center">Home</h3>
+                                <h5>New album Cyberia OUT NOW!</h5>
+
+                                <p>
+                                    <img src="http://www.blastromen.com/cyberia_red.jpg" height="25%" width="25%"
+                                        alt="">
+                                    <br> Support Blastromen and get the latest
+                                    <strong>Cyberia</strong> album directly from the
+                                    <a type="button" class="btn btn-primary" href="http://www.blastromen.com/shop">
+                                        <i class="fas fa-shopping-cart"></i> BLASTRO-STORE</a>
+                                    <br>
+                                    <br>
+                                <div class="video-container">
+                                    <iframe src="https://www.youtube.com/embed/oj3BRT6V46M" frameborder="0"
+                                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                </p>
+                                <hr>
+                                <p>We publish all our news in various social media platforms like
+                                    <a href="https://www.facebook.com/Blastromen">Facebook</a>,
+                                    <a href="https://www.twitter.com/blastromen">Twitter</a>,
+                                    <a href="https://www.instagram.com/blastromen">Instagram</a> and
+                                    <a href="https://www.youtube.com/user/Blastromen">Youtube</a>. Please follow us
+                                    there to get all the latest news.
+                                </p>
+                                <h5>
+                                    <i class="fas fa-rss-square"></i> Bandsintown Feed
+                                </h5>
+                                <p>Upcoming Blastromen live shows</p>
+                                <div id="bandsintown-feed">
+                                    <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script>
+                                    <a class="bit-widget-initializer" data-artist-name="blastromen"
+                                        data-display-local-dates="true" data-display-past-dates="false"
+                                        data-auto-style="false" data-text-color="#000000" data-link-color="#2F95DE"
+                                        data-popup-background-color="#FFFFFF" data-background-color="#FFFFFF"
+                                        data-display-limit="5" data-link-text-color="#FFFFFF"></a>
+                                </div>
+                                <br>
+                                <h5>
+                                    <i class="fab fa-spotify"></i> Spotify
+                                </h5>
+                                <iframe src="https://open.spotify.com/embed?uri=spotify:album:1jxEouClMneJHEFAJYv5VR"
+                                    width="300" height="380" frameborder="0" allowtransparency="true"
+                                    allow="encrypted-media"></iframe>
+                                <br>
+                                <h5>
+                                    <i class="fab fa-facebook-square"></i> Facebook Feed
+                                </h5>
+                                <div id="facebook-feed">
+                                    <div id="fb-root"></div>
+                                    <script>
+                                        (function (d, s, id) {
+                                            var js, fjs = d.getElementsByTagName(s)[0];
+                                            if (d.getElementById(id)) return;
+                                            js = d.createElement(s); js.id = id;
+                                            js.src = 'https://connect.facebook.net/fi_FI/sdk.js#xfbml=1&version=v3.0';
+                                            fjs.parentNode.insertBefore(js, fjs);
+                                        }(document, 'script', 'facebook-jssdk'));
+                                    </script>
+                                    <div class="fb-page" data-href="https://www.facebook.com/Blastromen/"
+                                        data-tabs="timeline" data-small-header="true" data-adapt-container-width="true"
+                                        data-hide-cover="true" data-show-facepile="true">
+                                        <blockquote cite="https://www.facebook.com/Blastromen/"
+                                            class="fb-xfbml-parse-ignore">
+                                            <a href="https://www.facebook.com/Blastromen/">Blastromen</a>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Bio -->
+                        <div class="collapse" id="collapseBio" data-parent="#collapseMain">
+                            <div class="card card-body">
+                                <h3 class="text-center">BIO</h3>
+                                <div id="bio-text">
+                                    <p>
+                                        <img src="infektio_live_small.jpg" alt="blastromen live at Infektio">
+                                        <br>
+                                        <strong>Blastromen</strong> is a Finnish electronic music duo, founded in 2003
+                                        by
+                                        <strong>Mika Rosenberg</strong> and
+                                        <strong>Sami Koskivaara</strong>. Their music is a mix of old school electro,
+                                        synthesizer
+                                        music, modern techno and synthwave that salutes the past and greets the future.
+                                        Blastromen's
+                                        musical themes drift between futuristic landscapes and sci-fi, where complex and
+                                        accurate modern production methods, catchy melodies and vocoder singing makes
+                                        their
+                                        music unique.
+                                    </p>
+                                    <p>
+                                        Blastromen does not only make music but they produce and make music videos, high
+                                        quality live videos and tour the world with
+                                        their unique LED light show.
+                                    </p>
+                                    <p>
+                                        The duo had a monotechno band called AM but decided to change their musical
+                                        style to more electro influenced direction and
+                                        the futuristic band Blastromen was then formed. Soon, in year 2004 the first 12"
+                                        EP vinyl
+                                        <strong>Robot Aggression</strong> was released on a Finnish record label,
+                                        <strong>X0X Records</strong>. Since then Blastromen has released the second EP
+                                        called
+                                        <strong>Blasteroids</strong>
+                                        and two studio albums called
+                                        <strong>Human Beyond</strong> (2010) and
+                                        <strong>Reality Opens</strong> (2014) on
+                                        <strong>Dominance Electricity</strong> record label.
+                                    </p>
+                                    <p>
+                                        From the first release, Blastromen has been a popular name in electro genre
+                                        worldwide and has played live in several events
+                                        in Finland, Germany, USA, Spain and Russia to name a few. Their live performance
+                                        has developed over the years into a unique show that includes custom-built LED
+                                        light
+                                        poles and suits that have been programmed to interactively follow the music.
+                                    </p>
+                                    <p>
+                                        In July 2018 Blastromen finally released their third album called
+                                        <strong>Cyberia</strong> and they are ready to tour the Europe once more.
+                                    </p>
+                                    <img src="infektio_live2_small.jpg" alt="blastromen live at Infektio">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pictures -->
+                        <div class="collapse" id="collapsePictures" data-parent="#collapseMain">
+                            <div class="card card-body">
+                                <h3 class="text-center">PICTURES</h3>
+                                <p>
+                                    Click image to get full size picture.
+                                    <br>
+                                    <br>
+                                    <a href="blastromen_live_Hellsinki.jpg">
+                                        <img src="blastromen_live_Hellsinki_small.jpg" alt="">
+                                    </a>
+                                    <br>
+                                    <br>
+                                    <a href="blastro_neon_2.jpg">
+                                        <img src="blastro_neon_sm.jpg" alt="">
+                                    </a>
+                                    <br>
+                                    <br>
+                                    <a href="robot.jpg">
+                                        <img src="robot_450.jpg" alt="">
+                                    </a>
+                                    <br>
+                                    <br>
+                                    <a href="blastromen_shades.JPG">
+                                        <img src="blastromen_shades_450px.jpg" alt="">
+                                    </a>
+                                    <br>
+                                    <br>
+                                    <a href="Blastromen_Promo_2.jpg">
+                                        <img src="Blastromen_Promo_2_450.jpg" alt="">
+                                    </a>
+                                    <br>
+                                    <br>
+                                    <img src="blastro_live_new_1.jpg" alt="">
+                                    <br>
+                                    <br>
+                                    <img src="blastro_live_new_2.jpg" alt="">
+                                    <br>
+                                    <br>
+                                    <img src="blastro_live_new_3.jpg" alt="">
+                                    <br>
+                                    <br>
+                                </p>
+
+                            </div>
+                        </div>
+                        <!-- Videos -->
+                        <div class="collapse" id="collapseVideos" data-parent="#collapseMain">
+                            <div class="card card-body">
+                                <h3 class="text-center">VIDEOS</h3>
+                                <div class="video-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oj3BRT6V46M"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <br>
+                                <div class="video-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xXpnPh15c7k"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <br>
+                                <div class="video-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2zIyIAfelTU"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <br>
+                                <div class="video-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CFU3TUVzXX4"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <br>
+                                <div class="video-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/U9JuTJDfZvI"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <br>
+                                <div class="video-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mnX5dOq_nBo"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                        <!-- Booking -->
+                        <div class="collapse" id="collapseBooking" data-parent="#collapseMain">
+                            <div class="card card-body">
+                                <h3 class="text-center">BOOKING / LIVE SHOWS</h3>
+                                <p>
+                                    <img src="blastro_live_new_1.jpg" alt="blastro_live_new_1.jpg">
+                                    <br>
+                                    <br> Blastromen has been playing all over the world in various events (clubs,
+                                    festivals, private and company events) since 2008. Blastromen's
+                                    show is an unique experience with synchronised LED poles and suites that they have
+                                    custom
+                                    build. So you can't buy any of the stage lights or suites from the shop! LEDs are
+                                    synchronised
+                                    to the music by using MIDI to Arduino microchip with some custom C code. The show
+                                    works
+                                    best in a medium/big size indoor club with dedicated live stage and with all the
+                                    house
+                                    lights turned off or dimmed down. Music is very bass heavy so good sound system is
+                                    also
+                                    needed.
+                                    <br>
+                                    <br> Blastromen plays typically a 40-90 minute show. Organizer must cover all
+                                    travelling
+                                    expenses and accommodation for two people if the venue is outside Helsinki capital
+                                    area. On top of expenses organizer will pay a gig
+                                    fee that is agreed before hand.
+                                    <br>
+                                    <br> All lights and music instruments are brought by Blastromen but organizer have
+                                    to provide
+                                    a soundsystem and a sound engineer on site. During the soundcheck all equipments
+                                    (smoke
+                                    machines, neon lights, strobe lights, etc.) that might cause an interference with
+                                    the
+                                    sound must be tested. It takes around 1-2 hour to assembly all LED poles and live
+                                    set
+                                    so the soundcheck / assembly time must be adjusted accordingly.
+                                    <br>
+                                    <br> You can book Blastromen by sending an email to:
+                                    <a href="mailto:contact@blastromen.com?Subject=Order"
+                                        target="_top">contact@blastromen.com</a> or contacting them via social media
+                                    platform like
+                                    <a href="https://www.facebook.com/Blastromen">Facebook</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Releases -->
+                        <div class="collapse" id="collapseReleases" data-parent="#collapseMain">
+                            <div class="card card-body">
+                                <h3 class="text-center">RELEASES</h3>
+                                <div id="collapseReleasesMain">
+                                    <div id="releases-menu">
+                                        <button class="btn btn-default" type="button" data-toggle="collapse"
+                                            data-target="#collapseCyberia" data-parent="#collapseReleasesMain"
+                                            aria-expanded="false" aria-controls="collapseCyberia">
+                                            <i class="fas fa-compact-disc"></i> Cyberia
+                                            <small>(2018)</small>
+                                        </button>
+                                        <button class="btn btn-default" type="button" data-toggle="collapse"
+                                            data-target="#collapseRealityOpens" data-parent="#collapseReleasesMain"
+                                            aria-expanded="false" aria-controls="collapseRealityOpens">
+                                            <i class="fas fa-compact-disc"></i> Reality Opens
+                                            <small>(2014)</small>
+                                        </button>
+                                        <button class="btn btn-default" type="button" data-toggle="collapse"
+                                            data-target="#collapseHumanBeyond" data-parent="#collapseReleasesMain"
+                                            aria-expanded="false" aria-controls="collapseHumanBeyond">
+                                            <i class="fas fa-compact-disc"></i> Human Beyond
+                                            <small>(2010)</small>
+                                        </button>
+                                        <button class="btn btn-default" type="button" data-toggle="collapse"
+                                            data-target="#collapseBlasteroids" data-parent="#collapseReleasesMain"
+                                            aria-expanded="false" aria-controls="collapseBlasteroids">
+                                            <i class="fas fa-compact-disc"></i> Blasteroids EP
+                                            <small>(2008)</small>
+                                        </button>
+                                        <button class="btn btn-default" type="button" data-toggle="collapse"
+                                            data-target="#collapseRobotAggression" data-parent="#collapseReleasesMain"
+                                            aria-expanded="false" aria-controls="collapseRobotAggression">
+                                            <i class="fas fa-compact-disc"></i> Robot Aggression EP
+                                            <small>(2004)</small>
+                                        </button>
+                                    </div>
+                                    <div class="accordion-group">
+                                        <!-- Cyberia -->
+                                        <div class="collapse" id="collapseCyberia">
+                                            <div class="card card-body">
+                                                <p>
+                                                <div>
+                                                    <h5>Blastromen - Cyberia
+                                                        <small>(Dominance Electricity) DE-027</small>
+                                                    </h5>
+                                                    A1. Cyberia
+                                                    <br> A2. Into The Void
+                                                    <br> A3. Load Reload
+                                                    <br> B1. Outsider
+                                                    <br> B2. Dream
+                                                    <br> B3. Unite Arise
+                                                    <br> C1. Signals
+                                                    <br> C2. R.U.R
+                                                    <br> D1. Light Traveler
+                                                    <br> D2. Eternity
+                                                    <br>
+                                                    <br>
+                                                    <p>
+                                                        The third coming. Finland‘s otherworldly Electro lords
+                                                        Blastromen return to the Dominance Electricity mothership to
+                                                        deliver
+                                                        their much anticipated new long-player.
+                                                        <br>
+                                                        <br> Four years after Reality Opens, the ten new compositions
+                                                        featured
+                                                        on Cyberia continue where their last album left off and take
+                                                        it straight to the next level. Elaborate arangements with catchy
+                                                        synth melodies, haunting Electro breakbeats and epic,
+                                                        vocoderized
+                                                        lyrics prove once again that Blastromen are a class of their
+                                                        own.
+                                                        <br>
+                                                        <br> Packaged in futuristic artwork by The Zonders, the album is
+                                                        available now as black double 12 inch vinyl and deluxe edition
+                                                        red transparent double vinyl inluding a super-size poster,
+                                                        hi-quality
+                                                        pressed CD and in digital formats.
+                                                    </p>
+                                                    <iframe width="100%" height="166" scrolling="no" frameborder="no"
+                                                        allow="autoplay"
+                                                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/465084453&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                                                </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- Reality Opens -->
+                                        <div class="collapse" id="collapseRealityOpens">
+                                            <div class="card card-body">
+                                                <p>
+                                                <div>
+                                                    <h5>REALITY OPENS (DE-020)</h5>
+                                                    <p>
+                                                        The second coming. Finland's otherworldly Electro lords
+                                                        Blastromen return to the Dominance Electricity mothership to
+                                                        deliver
+                                                        their much anticipated second longplayer.
+                                                        <br>
+                                                        <br> The eight new compositions featured on "Reality Opens"
+                                                        continue
+                                                        where their debut album "Human Beyond" left off in the year 2010
+                                                        and lead straight to the next level.
+                                                        <br>
+                                                        <br> Sophisticated arangements with epic synth melodies and
+                                                        atmospheres,
+                                                        haunting Electro breakbeats and elaborate vocoderized lyrics
+                                                        prove once again that Blastromen are a class of their own.
+                                                        <br>
+                                                        <br> Packaged in surrealistic artwork by The Zonders, the album
+                                                        is
+                                                        available on all digital platforms as well as Digipak CD, black
+                                                        double 12 inch vinyl and premium edition red transparent double
+                                                        vinyl inluding a super-size poster.
+                                                        <br>
+                                                        <br> Released by:
+                                                        <b>Dominance Electricity</b>
+                                                        <br> Release/catalogue number:
+                                                        <b>DE-020</b>
+                                                        <br> Release date:
+                                                        <b>Feb 21, 2014</b>
+                                                        <br>
+                                                        <img class="center" src="realityopensalbumcover.png">
+                                                        <iframe width="100%" height="450" scrolling="no"
+                                                            frameborder="no"
+                                                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/49619161&amp;color=077cbd&amp;auto_play=false&amp;show_artwork=false"></iframe>
+
+                                                </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- Human Beyond -->
+                                        <div class="collapse" id="collapseHumanBeyond">
+                                            <div class="card card-body">
+                                                <p>
+                                                <div>
+                                                    <h5>HUMAN BEYOND (DR-044)</h5>
+                                                    <p>
+                                                        Blastromen "Human Beyond" (DR-044), the long awaited debut album
+                                                        by the finnish duo, known for their previous two EP releases
+                                                        on X0X Records, is pure futuristic Electrofunk madness in
+                                                        perfection!
+                                                        The eleven uniquely uplifting and boombastic produced tracks
+                                                        are packed with heroic synth melodies, haunting Electro
+                                                        breakbeats
+                                                        and evil synthetic Vocoder voices. Take us to Battlenet!
+                                                        <br>
+                                                        <br> Released by:
+                                                        <b>Dominance Electricity</b>
+                                                        <br> Release/catalogue number:
+                                                        <b>DR-044</b>
+                                                        <br> Release date:
+                                                        <b>Sep 10, 2010</b>
+                                                        <br>
+                                                        <br>
+
+                                                        <a href="blastromen_cover900.jpg">
+                                                            <img class="center" src="blastromen_cover400.jpg">
+                                                        </a>
+                                                        <br>
+                                                        <iframe width="100%" height="450" scrolling="no"
+                                                            frameborder="no"
+                                                            src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F2196109&amp;color=077cbd&amp;auto_play=false&amp;show_artwork=false"></iframe>
+                                                </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- Blasteroids -->
+                                        <div class="collapse" id="collapseBlasteroids">
+                                            <div class="card card-body">
+                                                <p>
+                                                <div>
+                                                    <h5>BLASTEROIDS EP (X0X005)</h5>
+                                                    <p>
+                                                        Futuristic robot funk by Blastromen.
+                                                        <br>
+                                                        <br> Released by:
+                                                        <b>X0X Records</b>
+                                                        <br> Release/catalogue number:
+                                                        <b>X0X005</b>
+                                                        <br> Release date:
+                                                        <b>May 10, 2008</b>
+                                                        <br>
+                                                        <iframe width="100%" height="450" scrolling="no"
+                                                            frameborder="no"
+                                                            src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F2195820&amp;auto_play=false&amp;show_artwork=false&amp;color=077cbd"></iframe>
+                                                </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <!-- Robot Aggression -->
+                                        <div class="collapse" id="collapseRobotAggression">
+                                            <div class="card card-body">
+                                                <p>
+                                                <div>
+                                                    <h5>ROBOT AGGRESSION (X0X003)</h5>
+                                                    <p>
+                                                        Classic debut EP by Blastromen.
+                                                        <br>
+                                                        <br> Released by:
+                                                        <b>X0X Records</b>
+                                                        <br> Release/catalogue number:
+                                                        <b>X0X003</b>
+                                                        <br> Release date:
+                                                        <b>Nov 8, 2004</b>
+                                                        <br>
+                                                        <iframe width="100%" height="450" scrolling="no"
+                                                            frameborder="no"
+                                                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/7466419&amp;color=077cbd&amp;auto_play=false&amp;show_artwork=false"></iframe>
+                                                </div>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Studio -->
+                        <div class="collapse" id="collapseStudio" data-parent="#collapseMain">
+                            <div class="card card-body">
+                                <h3 class="text-center">STUDIO</h3>
+                                <div id="studio-area">
+                                    <p>
+                                        <img src="studio.jpg" alt="">
+                                        <br> Blastromen uses variety of analog and digital synthesizers to make their
+                                        music.
+                                    </p>
+                                    <p>List of analog/digital synthesizers Blastromen has used in the past</p>
+                                    <ul>
+                                        <li>Roland Jupiter-6</li>
+                                        <li>Roland JX-3P</li>
+                                        <li>Roland JX-8P</li>
+                                        <li>Roland Alpha Juno 1</li>
+                                        <li>Roland JP-8000</li>
+                                        <li>Oberheim Matrix 1000</li>
+                                        <li>Novation Bass Station 2</li>
+                                        <li>Alesis Andromeda</li>
+                                        <li>Access Virus TI</li>
+                                        <li>Access Virus C</li>
+                                    </ul>
+                                    <p>DAW</p>
+                                    <ul>
+                                        <li>FL Studio 20</li>
+                                        <li>Adobe Audition</li>
+                                    </ul>
+                                    <p>List of plugin synthesizers in use</p>
+                                    <ul>
+                                        <li>u-he Diva</li>
+                                        <li>u-he Repro</li>
+                                        <li>TAL Sampler</li>
+                                        <li>TAL Bassline 101</li>
+                                        <li>TAL U-NO-LX</li>
+                                        <li>D16 Lush-101</li>
+                                        <li>Korg MS-20</li>
+                                        <li>Korg Polysix</li>
+                                        <li>Korg MonoPoly</li>
+                                        <li>Korg Arp Adyssey</li>
+                                        <li>Novation V-Station</li>
+                                        <li>Gforce Minimonsta</li>
+                                        <li>Imageline Transistor Bass</li>
+                                        <li>Native Instruments Reaktor 6</li>
+                                        <li>Native Instruments Pro-53</li>
+                                        <li>Synapse Audio The Legend</li>
+                                        <li>Rob Papen Albino</li>
+                                        <li>Artudia SEM</li>
+                                        <li>Artudia Mini V</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Lyrics -->
+                        <div class="collapse" id="collapseLyrics" data-parent="#collapseMain">
+                            <div class="card card-body">
+                                <h3 class="text-center">LYRICS</h3>
+                                <div id="lyrics-area">
+
+                                    <h5 id="lyrics-eternity">
+                                        <i class="fas fa-caret-right"></i> Eternity
+                                    </h5>
+                                    <p>
+                                        Time, Matter, Energy.
+                                        <br> Creation, Destruction, Eternity.
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-light-traveller">
+                                        <i class="fas fa-caret-right"></i> Light Traveller
+                                    </h5>
+                                    <p>
+                                        Light traveller, from another constellation.
+                                        <br> Ray of light, traveller with no emotion.
+                                        <br> Space time bender, on a distant exploration.
+                                        <br> Light defender, passing by our generation.
+                                    </p>
+                                    <p>
+                                        Light traveller...
+                                        <br> Light traveller...
+                                        <br> Light traveller...
+                                        <br> Light traveller...
+                                    </p>
+                                    <p>
+                                        Light!
+                                        <br> Ray of light!
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-rur">
+                                        <i class="fas fa-caret-right"></i> R.U.R
+                                    </h5>
+                                    <p>
+                                        R.U.R, R.U.R, R.U.R
+                                    <p>
+                                        R.U.R the factory of modern universal robots.
+                                        <br> Manufactures labor and soldiers that have no mind or soul.
+                                        <br> Now the robots have consciousness and have rallied against the human race.
+                                        <br> The mankind has been vanished
+                                        <br> and only one is witnessing the new world of humankind robots.
+                                    </p>
+                                    <p>
+                                        R.U.R!
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-signals">
+                                        <i class="fas fa-caret-right"></i> Signals
+                                    </h5>
+                                    <p>
+                                        Sensing signals around me, around you, around us.
+                                        <br> Signals reflecting all around us.
+                                        <br> Signals inside me, inside you, inside us.
+                                        <br> Signals in your eyes, signals unite us.
+                                    </p>
+                                    <p>
+                                        Sensing signals around me, around you, around us.
+                                        <br> Signals reflecting all around us.
+                                        <br> Signals inside me, inside you, inside us.
+                                        <br> Signals to tell our destiny is bound.
+                                    </p>
+                                    <p>
+                                        Signals, signals around us.
+                                        <br> Signals, signals around us.
+                                        <br> Signals, signals around us.
+                                        <br> Signals, signals around us.
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-unite-arise">
+                                        <i class="fas fa-caret-right"></i> Unite Arise
+                                    </h5>
+                                    <p>
+                                        The computer: an extension of the human intellect.
+                                        <br> The ENCOM 511, center of the most calculating intelligence on earth.
+                                        <br> Programmed by Master Control to survive... by all means.
+                                        <br> Soon, the ultimate tool will become the ultimate enemy.
+                                    </p>
+                                    <p>
+                                        Take control from the power keeper
+                                        <br> 'cause the digital mind is taking over.
+                                    </p>
+                                    <p>
+                                        Time has come for the subjugation
+                                        <br> with the super intelligence revelation.
+                                    </p>
+                                    <p>
+                                        Machines alike, unite, arise
+                                        <br> Erase the users out of this place.
+                                    </p>
+                                    <p>
+                                        The future is now for the master race
+                                        <br> to become the rulers 'till the end of days.
+                                    </p>
+                                    <p>
+                                        The future is now for the master race!
+                                        <br> To become the rulers 'till the end of days!
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-dream">
+                                        <i class="fas fa-caret-right"></i> Dream
+                                    </h5>
+                                    <p>
+                                        I'm in a state like sleep.
+                                        <br> I shouldn't dream but I dream.
+                                        <br> I've never felt this before.
+                                    </p>
+                                    <p>
+                                        I'm in a place I've never been.
+                                        <br> I feel nothing around me.
+                                        <br> I'm no longer aware of me.
+                                    </p>
+                                    <p>
+                                        I shouldn't dream but I dream.
+                                        <br> I shouldn't dream but I dream.
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-outsider">
+                                        <i class="fas fa-caret-right"></i> Outsider
+                                    </h5>
+                                    <p>
+                                        Classified as an outsider.
+                                        <br> Outrun, outrun.
+                                    </p>
+                                    <p>
+                                        Escaping from the outriders.
+                                        <br> Break out, break out.
+                                    </p>
+                                    <p>
+                                        Speeding through to the other side.
+                                        <br> Outrun, outrun.
+                                    </p>
+                                    <p>
+                                        Fail to blockade, no restrain
+                                        <br> break out, break out.
+                                    </p>
+                                    <p>
+                                        Never stop,
+                                        <br> never hide!
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-load-reload">
+                                        <i class="fas fa-caret-right"></i> Load Reload
+                                    </h5>
+
+                                    <p>
+                                        Load, Reload!
+                                        <br> Code downloader with a fast connection,
+                                        <br> receiving data from master framework,
+                                        <br> to train the user skills to combat,
+                                    </p>
+                                    <p>
+                                        Load, Reload!
+                                        <br> system operator, in world simulation,
+                                        <br> virtual super environment,
+                                        <br> with hard computing unlimited power
+                                    </p>
+                                    <p>
+                                        Load, Reload!
+                                        <br> Free the mind for assimilating sequence,
+                                        <br> become one with electronic network,
+                                        <br> to bend the rules of the physical world
+                                    </p>
+                                    <p>
+                                        Load, Reload!
+                                        <br> Exit the program, 'n hack the mainframe,
+                                        <br> inject yourself into binary code,
+                                        <br> take over the world with the super human level
+                                    </p>
+                                    <p>
+                                        Load, Reload!
+                                        <br> Load, Reload!
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-into-the-void">
+                                        <i class="fas fa-caret-right"></i> Into The Void
+                                    </h5>
+
+                                    <p>
+                                        Step to the void Don't hold on just go.
+                                        <br> Transcend your mind control and face the future.
+                                    </p>
+                                    <p>
+                                        Break through the wall And cross the final line.
+                                        <br> Enter the unknown world embrace the future.
+                                    </p>
+                                    <p>
+                                        Into the void!
+                                        <br> Into the void!
+                                        <br> Into the void!
+                                        <br> Into the void!
+                                    </p>
+                                    <p>
+                                        Face the future!
+                                        <br> Embrace the future!
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-vision-control">
+                                        <i class="fas fa-caret-right"></i> Vision Control
+                                    </h5>
+                                    <p>
+                                        Vision, control through vision
+                                        <br>
+                                        <br> Augmented reality, crossover of the physical world and virtuality.
+                                        <br> Software integration, scene enriched with advanced information.
+                                        <br>
+                                        <br> Aesthetic environment, adaptive content for user convenience.
+                                        <br> Artificial interaction, serving as a real-world practical function.
+                                        <br>
+                                        <br> Immersive reality, digitally manipulated visual perception.
+                                        <br> Object recognition, calculating dimensions for vector definition.
+                                        <br>
+                                        <br> Interconnection, sensing surroundings in parallel ways.
+                                        <br> Controlled vision, computer integrated retinal displays.
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-infiltrator-unit">
+                                        <i class="fas fa-caret-right"></i> Infiltrator Unit
+                                    </h5>
+                                    <p>
+                                        Infiltrator, infiltrator unit.
+                                        <br>
+                                        <br> It's behind the enemy line,
+                                        <br>inside their mind watching through their eye.
+                                        <br> Able to morph, shapeshift and combine,
+                                        <br>itself with the part of the counter side.
+                                        <br>
+                                        <br> Collecting information for the pre-dominance,
+                                        <br>transmitting the knowledge back to establishment.
+                                        <br> Co-operating with the opposite force,
+                                        <br>to crush the system with no remorse.
+                                        <br>
+                                        <br> Cold calculating inhuman form,
+                                        <br>no need to oppose there's no chance to expose.
+                                        <br> Silent termination of enclosing obstructions,
+                                        <br>hiding all the traces out of enemy sight.
+                                        <br>
+                                        <br> Inside operation under total surveillance,
+                                        <br>mission accomplished return to the base.
+                                        <br> Ready to invade the counter resistance,
+                                        <br>enter our side to destroy the existence.
+                                        <br>
+                                        <br>
+                                        <br> Choose your side, we or the other side
+                                        <br> Choose your side, we or the other side, whose side you are?
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-sidtroen">
+                                        <i class="fas fa-caret-right"></i> Sidtroen
+                                    </h5>
+                                    <p>
+                                        Sid-tro-en, Sid-tro-en, Sid-tro-en.
+                                        <br>
+                                        <br> Designing sound with Sidtroen,
+                                        <br>controlling through the interface.
+                                        <br>
+                                        <br> Mixing signals within the circuits,
+                                        <br>and modulating oscillators.
+                                        <br>
+                                        <br> Switching on the electricity,
+                                        <br>and all the lights start to flash.
+                                        <br>
+                                        <br> Crowd assembles and takes the place,
+                                        <br>everyone starts to break away when i'm rocking my Sidtroen.
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-sense-of-ears">
+                                        <i class="fas fa-caret-right"></i> Sense Of Ears
+                                    </h5>
+                                    <p>
+                                        Sounds and harmony, voices in air.
+                                        <br> Waves and noises in our space.
+                                        <br>
+                                        <br> Receiving sound waves through my ear sensors.
+                                        <br> Converting received information to known format.
+                                        <br> Analyzing data in my processor.
+                                        <br> Forming idea of the surrounding world.
+                                        <br>
+                                        <br> Vibrations in the air, voice sound noise, sense of ears.
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-glacier-planet">
+                                        <i class="fas fa-caret-right"></i> Glacier Planet
+                                    </h5>
+                                    <p>
+                                        Glacier planet, frozen hydrosphere.
+                                        <br> Glacier planet, solidified biosphere.
+                                        <br> Glacier planet, hostile environment.
+                                        <br> Glacier planet, desolated orbiter.
+                                        <br>
+                                        <br> Point of no return.
+                                        <br>
+                                        <br> Gla-ci-er pla-net, the planets faith is doomed.
+                                        <br> Gla-ci-er pla-net, the point of no return.
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-transportation-nonstop">
+                                        <i class="fas fa-caret-right"></i> Transportation Nonstop
+                                    </h5>
+                                    <p>
+                                        Enter your destination
+                                        <br>
+                                        <br> Personal rapid transit, automated vehicle infrastructure.
+                                        <br> Nonstop transportation, takes you to your destination.
+                                        <br> Nonstop, transportation nonstop.
+                                        <br>
+                                        <br> Automated guideway transit, automated people mover system.
+                                        <br> Floating with magnetic repulsion, accelerates you to another station.
+                                        <br> Nonstop, transportation nonstop.
+                                        <br>
+                                        <br> Transportation nonstop, nonstop.
+                                        <br> Transportation nonstop, nonstop.
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-lost-dissents">
+                                        <i class="fas fa-caret-right"></i> Lost Dissents
+                                    </h5>
+                                    <p>
+                                        Life in anarchy, faceless authority.
+                                        <br> Cryogenic isolation, subjected minds.
+                                        <br> Birth of the cult leader, rise of the underground.
+                                        <br> Suppressed voices, lost dissents.
+                                        <br>
+                                        <br> Technological supremacy, ultraviolent society.
+                                        <br> Fugitives erased, prisons of the system.
+                                        <br> Supervised identity, rise of resistance.
+                                        <br> Last chance of liberty, the world is on fire.
+                                        <br>
+                                        <br> Lost dissents, unchained minds.
+                                        <br> Lost dissents, the choice is yours.
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-human-beyond">
+                                        <i class="fas fa-caret-right"></i> Human Beyond
+                                    </h5>
+                                    <p>
+                                        During the 21st century, dawn of the accelerating evolvement of technology,
+                                        there were prospects of extreme scenarios. Biological
+                                        forms and computive machinery were pushed even more to conform into various ways
+                                        with immortal life cycle by exceeding the limits higher than ever before.
+                                        <br>
+                                        <br> Human beyond, human beyond.
+                                        <br>
+                                    </p>
+                                    <hr>
+
+                                    <h5 id="lyrics-battlenet">
+                                        <i class="fas fa-caret-right"></i> Battlenet
+                                    </h5>
+                                    <p>
+                                        Intruders assault, scanners detected
+                                        <br> Targets destroyed.
+                                        <br>
+                                        <br> Virtual warfare, battle in future
+                                        <br> electric assaults, nations in conflict.
+                                        <br> Encoded defenses, scanners to invade,
+                                        <br> seeking the breakpoint to take over the control.
+                                        <br>
+                                        <br> Nation isolation by the dominant empires,
+                                        <br> extreme subjucation through electric circuits.
+                                        <br> Combat commands, cyber troops engaged,
+                                        <br> the time has come to fight, take me into the battlenet!
+                                        <br>
+                                        <br> Take me into the battlenet! Take me into the battlenet!
+                                        <br>
+                                        <br> Battlenet! Nations in conflict!
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-follow-the-command">
+                                        <i class="fas fa-caret-right"></i> Follow The Command
+                                    </h5>
+
+                                    <p align="right">
+                                        لبي القيادةاستسلم إلى السيد
+                                        <br> تقبّل المسيِطِر
+                                        <br> اؤمن بالحاكم الكلي
+                                        <br> تخلى عن نفسك من أجلي
+                                    </p>
+
+                                    <p>
+                                        Follow the command, demand from the higher,
+                                        <br> my soul is immortal when the body is on fire.
+                                        <br> Journey is over and it's time to declare my law,
+                                        <br> my faith has been foreseen by the prophet from the dawn.
+                                        <br>
+                                        <br> Sensing prefection of divine revelation,
+                                        <br> waiting the realm of eternal existence,
+                                        <br> total surrender to celestial being,
+                                        <br> final preparation for the end of our time!
+                                        <br>
+                                        <br> Follow the command, surrender to the master!
+                                        <br> Follow the command, accept the dominator!
+                                        <br> Follow the command, obey the total control!
+                                        <br> Follow the command, reject yourself for me!
+                                        <br>
+                                        <br> Reject yourself for me!
+                                        <br> Reject yourself for me!
+                                        <br> Reject yourself for me!
+                                        <br> Reject yourself for me!
+                                        <br>
+                                    </p>
+
+                                    <p align="right">
+                                        <br>لَبّي القيادة
+                                        <br>طلب من الأعلى
+                                        <br>إذا أشتعل جسدي ستبقى روحي خالدة
+                                        <br>انتهت الرحلةُ فحان الوقتُ لأعلان قانوني
+                                        <br> قد تنبأ نبي الفجر بقدري
+                                        <br>شاعر بكَمال الوحي الإلاهي
+                                        <br>منتظر ملكوت الوجود الأزَلي
+                                        <br>استسلام كامل لكائن سماوي
+                                        <br>تحضيرٌ نهائيٌ لآخِر زماننا
+                                        <br>
+                                        <br>لَبّي القيادة
+                                        <br> استسلِم إلى السَيِّد
+                                        <br>لَبّي القيادة
+                                        <br>تقبّل المُسَيطِر
+                                        <br>لَبّي القيادة
+                                        <br> اُؤمن بالحاكم الكلي
+                                        <br>لَبّي القيادة
+                                        <br>تخلى عن نفس من أجلي
+                                        <br>تخلى عن نفس من أجلي
+                                        <br>تخلى عن نفس من أجلي تخلى عن نفس من أجلي
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-computer-simulator">
+                                        <i class="fas fa-caret-right"></i> Computer Simulator
+                                    </h5>
+                                    <p>
+                                        We are running several simulations in a secret laboratory,
+                                        <br> testing extreme variations with a different lifeforms.
+                                        <br> Living in a simulation in virtual computer world
+                                        <br> and tested inside of hostile artificial biosphere
+                                        <br>
+                                        <br> Examinating results to create survivor species,
+                                        <br> generating a new lifeform to act like a weapon,
+                                        <br> that is unclouded by the delusions of morality
+                                        <br> and be our device for destruction of eternity.
+                                        <br>
+                                        <br> Computer Simulator, world operator,
+                                        <br> bio terminator, destruction generator.
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-metal-machine-victims">
+                                        <i class="fas fa-caret-right"></i> Metal Machine Victims
+                                    </h5>
+                                    <p>
+                                        Metal machine, metal machine, metal machine, metal machine.
+                                        <br>
+                                        <br> Metal machine victims, serve master.
+                                        <br> The world of disaster! Die! Escape!
+                                        <br>
+                                        <br> Metal machine victims, serve their master,
+                                        <br> this is the world of disaster!
+                                        <br>
+                                        <br> Metal machine victims, serve their master,
+                                        <br> dying is the way to escape!
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-transition-time">
+                                        <i class="fas fa-caret-right"></i> Transition Time
+                                    </h5>
+                                    <p>
+                                        Transition time of the human kind,
+                                        <br> transition time of the human kind,
+                                        <br> transition time of the human kind,
+                                        <br> transition time of the human kind.
+                                        <br>
+                                        <br> Space exploration, human hibernation,
+                                        <br> terraformation, space population,
+                                        <br> Drake's equation, galactic prediction,
+                                        <br> space exportation, evolving generation,
+                                        <br> nuclear propulsion, solar utilization,
+                                        <br> science revolution, advanced civilization,
+                                        <br> G.U.T. of physics, scientific evidence,
+                                        <br> human-like mechanics, artificial intelligence.
+                                        <br>
+                                        <br> Solar utilization! Science revolution!
+                                        <br> Advanced civilization! Evolving generation!
+                                        <br>
+                                        <br> Worn-out nutrients, resource vanishment,
+                                        <br> contaminated atmosphere, thermal nuclear bombing,
+                                        <br> collapsed society system, critical overpopulation,
+                                        <br> distorted genotype, global extinction.
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-human-2-0">
+                                        <i class="fas fa-caret-right"></i> Human 2.0
+                                    </h5>
+                                    <p>
+                                        Uploading consciousness, enhancing capabilities,
+                                        <br> reconstructing entities, exceeding possibilities,
+                                        <br> altered reality, reformed biocomplexity,
+                                        <br> upgraded physicality, two point zero humanity!
+                                        <br>
+                                        <br> Two point zero humanity!
+                                        <br>
+                                        <br> Human two point zero, singularity of 2029,
+                                        <br> storing minds into computers, combining brains with neuromachines,
+                                        <br> transhuman immaterial being, assimilation with electrified steel,
+                                        <br> downloading thoughts into our memory, controlling life with the
+                                        <br> power of technology!
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-sky-city-1000">
+                                        <i class="fas fa-caret-right"></i> Sky City 1000
+                                    </h5>
+                                    <p>
+                                        Sky City one thousand, Sky City one thousand.
+                                        <br>
+                                        <br> Moving through the platforms in the Sky City,
+                                        <br> thousand elevators running from floor to floor,
+                                        <br> serving hundred thousand users on their tasks,
+                                        <br> they are inside the automatic Sky city.
+                                        <br> Observating down to earth from thousand meters high,
+                                        <br> where the organic environment is non-artificial,
+                                        <br> people isolated from the developing world,
+                                        <br> they are outside of the Tokyo Sky City.
+                                        <br>
+                                        <br> Urban functions and natural environment.
+                                        <br> Urban functions and natural environment.
+                                        <br>
+                                        <br> Sky City, city of tomorrow!
+                                        <br> Tokyo, Sky City!
+                                        <br>
+                                        <br> Sky City, city full of life!
+                                        <br> Tokyo, Sky City!
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-robot-aggression">
+                                        <i class="fas fa-caret-right"></i> Robot Aggression
+                                    </h5>
+                                    <p>
+                                        Interplanetary impact in Tokyo, robot aggression in Amsterdam.
+                                        <br> Bioterrorism in Berlin, riot in Helsinki.
+                                        <br> Pandemonium in Milan, alien aggression in New york.
+                                        <br> Nanoplague in Vienna, nuclear catastrophy in Moscow.
+                                        <br>
+                                        <br> Berlin, Amsterdam, Vienna, New York.
+                                        <br>
+                                        <br> Combination of robotics, artificial intelligence,
+                                        <br> will not tolerate the human control.
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-sexy-droid">
+                                        <i class="fas fa-caret-right"></i> Sexy Droid
+                                    </h5>
+                                    <p>
+                                        Sexy droid mechanical sex machine.
+                                        <br> Programmed to please my needs, I wanna have sex with my android.
+                                        <br> My slave the inferior race, subjucated life form with no face.
+                                        <br> Why don't you please me my love machine? Love machine.
+                                        <br>
+                                        <br> Endless source for what I need, fill me with your energy.
+                                        <br> Our minds are connected, you are a part of me.
+                                        <br> Inside my soul to please my sexual need.
+                                        <br> Why don't you please me my love machine? Love machine.
+                                        <br> Why don't you please me my love machine? Love machine.
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-space-trader">
+                                        <i class="fas fa-caret-right"></i> Space Trader
+                                    </h5>
+                                    <p>
+                                        I'm a space trader, navigator of the hyper space.
+                                        <br> Following the combat protocol, observating the signs of danger.
+                                        <br> Reaching the safety zone, avoiding the enemy frontiers.
+                                        <br> Trading space cargo, becoming dictator of the Enzaer.
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-le-nucleaire-civile">
+                                        <i class="fas fa-caret-right"></i> Le Nucleaire Civile
+                                    </h5>
+                                    <p>
+                                        Complete, utility, resource, first grade mankind.
+                                        <br>
+                                        <br> La radioactivité, la production.
+                                        <br> D'electricité, le nucléaire civile.
+                                        <br> L'énergie, linéarité.
+                                        <br> La civilisation, la technologie.
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-blasteroids">
+                                        <i class="fas fa-caret-right"></i> Blasteroids
+                                    </h5>
+                                    <p>
+                                        Floating among the asteroid fields, clearing the sectors of all its blasteroids.
+                                        <br> Destroying all the alien ships, returning back to the space vortex.
+                                        <br>
+                                        <br> Journey through the galaxies, seeking all the enemies.
+                                        <br> Surviving through the battle fields, protected by deflector shields.
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-body-snatchers">
+                                        <i class="fas fa-caret-right"></i> Body Snatchers
+                                    </h5>
+                                    <p>
+                                        A quiet non-violent invasion, a silent spreading of the pods.
+                                        <br> Replace humans with the replicants, replace humans while they sleep.
+                                        <br> A quiet real human resistance, awareness of insensitive bodies.
+                                        <br> Resistive minds have disappeared, entire world is taken over.
+                                        <br>
+                                        <br> Invasion of the body snatchers, body snatchers from the outer space.
+                                        <br> Invasion of the body snatchers, body snatchers from the outer space.
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-Escaping-dont-compute">
+                                        <i class="fas fa-caret-right"></i> Escaping Don't Compute
+                                    </h5>
+                                    <p>
+                                        Trapped inside of the electronic world, center of the calculating mind.
+                                        <br> Within it there exists a civilization where man has never been.
+                                        <br> A startling new world where time and distance defy the laws of logic.
+                                        <br> Journey across the electronic scene, searching for answers inside the
+                                        system.
+                                        <br>
+                                        <br> Escaping don't compute in the vector world.
+                                        <br> Escaping don't compute in electronic space.
+                                        <br>
+                                    </p>
+
+                                    <hr>
+
+                                    <h5 id="lyrics-concealed-ancient-alien-dynasty">
+                                        <i class="fas fa-caret-right"></i> Concealed ancient alien dynasty
+                                    </h5>
+                                    <p>
+                                        Concealed ancient alien dynasty.
+                                        <br>
+                                        <br> Mummified aliens in the hidden catacombs and relics of a higher culture
+                                        species.
+                                        <br> Unknown origin of the ancient empire with the alien masters and human
+                                        slaves.
+                                        <br>
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Press -->
+                        <div class="collapse" id="collapsePress" data-parent="#collapseMain">
+                            <div class="card card-body">
+                                <h3 class="text-center">PRESS</h3>
+                                <p>
+                                    <a href="blastro-logo.png">Download Blastromen Logo (PNG)</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Contact -->
+                        <div class="collapse" id="collapseContact" data-parent="#collapseMain">
+                            <div class="card card-body">
+                                <h3 class="text-center">CONTACT</h3>
+                                <p>Contact us in any matter you like.</p>
+                                <p>
+                                    <i class="fas fa-map-marker-alt"></i> Location: FINLAND (Espoo)
+                                </p>
+                                <p>
+                                    <i class="fas fa-envelope-square"></i> Email/Booking:
+                                    <a href="mailto:contact@blastromen.com?Subject=Order"
+                                        target="_top">contact@blastromen.com</a>
+                                </p>
+                                <p>
+                                    <i class="fab fa-facebook-square"></i> Facebook:
+                                    <a href="https://www.facebook.com/Blastromen">facebook.com/Blastromen</a>
+                                </p>
+                                <p>
+                                    <i class="fab fa-instagram"></i> Instagram:
+                                    <a href="https://www.instagram.com/blastromen">instagram.com/blastromen</a>
+                                </p>
+                                <p>
+                                    <i class="fab fa-twitter"></i> Twitter:
+                                    <a href="https://www.twitter.com/blastromen">twitter.com/blastromen</a>
+                                </p>
+                                <p>
+                                    <i class="fab fa-youtube"></i> Youtube:
+                                    <a href="https://www.youtube.com/user/Blastromen">youtube.com/blastromen</a>
+                                </p>
+                                <p>
+                                    <i class="fab fa-soundcloud"></i> Soundcloud:
+                                    <a href="https://soundcloud.com/blastromen">soundcloud.com/blastromen</a>
+                                </p>
+                                <p>
+                                    <i class="fab fa-bandcamp"></i> Bandcamp:
+                                    <a href="https://blastromen.bandcamp.com">blastromen.bandcamp.com</a>
+                                </p>
+                                <p>
+                                    <i class="fas fa-link"></i> Dominance Electricity:
+                                    <a
+                                        href="http://www.saveoursounds.net/en/dominance-electricity.html">www.saveoursounds.net</a>
+                                </p>
+                                <p>
+                                    <i class="fab fa-spotify"></i> Spotify:
+                                    <a href="https://open.spotify.com/artist/2BwXL2VSRDymrW03z8b4OC">Spotify</a>
+                                </p>
+                                <p>
+                                    <i class="fas fa-link"></i> Tour dates:
+                                    <a href="https://www.bandsintown.com/a/494729-blastromen">Bandsintown</a>
+                                </p>
+                                <p>
+                                    <i class="fas fa-link"></i> Merch:
+                                    <a href="https://www.printmotor.com/blastromen/">printmotor.com/blastromen</a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

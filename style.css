@@ -1,0 +1,220 @@
+/* Reset and base styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Share Tech Mono', monospace;
+    /* Updated font */
+    color: #fff;
+}
+
+/* Container and background */
+.container {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('img/blastromen_live_Hellsinki.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5vh;
+    /* Add some padding to push content down slightly */
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Base layout classes */
+.wrapper {
+    width: 600px;
+    max-width: 90%;
+    position: absolute;
+    top: 25vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content {
+    text-align: left;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0;
+    margin: 0;
+    border: none;
+    overflow-y: auto;
+    height: 50vh;
+}
+
+/* Typography classes */
+.text-base {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.6;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.section-title {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+/* List styling */
+.list-clean {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.list-item {
+    margin: 0.5rem 0;
+}
+
+/* Link styles */
+.link-primary {
+    color: #ff0000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link-primary:hover {
+    color: #0ff;
+}
+
+/* Navigation */
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    /* Changed from wrap to nowrap */
+    gap: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.menu a {
+    color: #0ff;
+    font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+    /* Adjusted font size */
+    padding: 0.5rem 0.2rem;
+    /* Reduced horizontal padding */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.menu a.active {
+    color: #ff0000;
+}
+
+/* Adjust menu for smaller screens */
+@media (max-width: 768px) {
+    .menu {
+        gap: 0.5rem;
+        /* Reduced gap for mobile */
+        padding: 1rem 0.5rem;
+        /* Reduced horizontal padding */
+    }
+
+    .menu a {
+        padding: 0.5rem 0.1rem;
+        /* Further reduced padding */
+    }
+}
+
+/* Social links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+}
+
+.social-links a {
+    color: #0ff;
+    font-size: clamp(1.5rem, 6vw, 2rem);
+}
+
+.social-links a:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Scrollbar styling */
+.content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: #0ff;
+    border-radius: 4px;
+}
+
+/* Content sections */
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Spacing utilities */
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+/* Media queries remain the same */
+@media (max-width: 768px) {
+    .container {
+        background-attachment: scroll;
+        /* Better mobile performance */
+    }
+
+    h1 {
+        letter-spacing: 0.25rem;
+        /* Reduced letter spacing for mobile */
+    }
+}
+
+/* Handle very small screens */
+@media (max-width: 320px) {
+    .content {
+        padding: 1rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
