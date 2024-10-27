@@ -5,7 +5,6 @@ html {
     padding: 0;
     height: 100%;
     font-family: 'Share Tech Mono', monospace;
-    /* Updated font */
     color: #fff;
 }
 
@@ -18,10 +17,8 @@ html {
     background-position: center;
     background-attachment: fixed;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    padding-top: 5vh;
-    /* Add some padding to push content down slightly */
 }
 
 /* Overlay */
@@ -33,7 +30,7 @@ html {
     height: 100%;
     background: rgba(0, 0, 0, 0);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -42,7 +39,7 @@ html {
     width: 600px;
     max-width: 90%;
     position: absolute;
-    top: 25vh;
+    top: 5vh;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -50,7 +47,7 @@ html {
 .content {
     text-align: left;
     padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 0;
     margin: 0;
     border: none;
@@ -91,6 +88,10 @@ html {
     transition: color 0.3s ease;
 }
 
+.highlight {
+    color: #ff0000;
+}
+
 .link-primary:hover {
     color: #0ff;
 }
@@ -102,7 +103,7 @@ html {
     flex-wrap: nowrap;
     /* Changed from wrap to nowrap */
     gap: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 1rem;
     border-radius: 10px 10px 0 0;
     position: relative;
@@ -147,7 +148,7 @@ html {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 1rem;
     border-radius: 0 0 10px 10px;
 }
@@ -217,4 +218,12 @@ html {
         flex-direction: column;
         align-items: center;
     }
+}
+
+/* Typography classes */
+.text-small {
+    font-size: clamp(0.5rem, 1vw, 0.6rem);
+    /* Reduced from 0.7rem, 1.5vw, 0.8rem */
+    color: #fff;
+    opacity: 0.8;
 }
