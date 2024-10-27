@@ -26,4 +26,45 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById(sectionId).style.display = 'block';
         });
     });
+
+    // Carousel functionality
+    document.addEventListener('DOMContentLoaded', () => {
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = document.querySelector('.carousel-button.next');
+        const prevButton = document.querySelector('.carousel-button.prev');
+
+        let currentIndex = 0;
+
+        // Set initial position
+        const updateSlidePosition = () => {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateButtons();
+        };
+
+        // Update button states
+        const updateButtons = () => {
+            prevButton.disabled = currentIndex === 0;
+            nextButton.disabled = currentIndex === slides.length - 1;
+        };
+
+        // Next button click
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < slides.length - 1) {
+                currentIndex++;
+                updateSlidePosition();
+            }
+        });
+
+        // Previous button click
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlidePosition();
+            }
+        });
+
+        // Initialize carousel
+        updateSlidePosition();
+    });
 });

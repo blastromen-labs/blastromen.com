@@ -12,7 +12,7 @@ html {
 .container {
     position: relative;
     min-height: 100vh;
-    background-image: url('img/blastromen_live_Hellsinki.jpg');
+    background-image: url('img/blastro_neon_2.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -47,7 +47,7 @@ html {
 .content {
     text-align: left;
     padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 0;
     margin: 0;
     border: none;
@@ -103,7 +103,7 @@ html {
     flex-wrap: nowrap;
     /* Changed from wrap to nowrap */
     gap: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 1rem;
     border-radius: 10px 10px 0 0;
     position: relative;
@@ -111,7 +111,7 @@ html {
 
 .menu a {
     color: #0ff;
-    font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+    font-size: clamp(0.7rem, 2.5vw, 1.1rem);
     /* Adjusted font size */
     padding: 0.5rem 0.2rem;
     /* Reduced horizontal padding */
@@ -148,7 +148,7 @@ html {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 1rem;
     border-radius: 0 0 10px 10px;
 }
@@ -223,7 +223,60 @@ html {
 /* Typography classes */
 .text-small {
     font-size: clamp(0.5rem, 1vw, 0.6rem);
-    /* Reduced from 0.7rem, 1.5vw, 0.8rem */
+    /* Reduced from 0.7rem, 1.5vw, 0.7rem */
     color: #fff;
-    opacity: 0.8;
+    opacity: 0.7;
+}
+
+/* Carousel styling */
+.carousel {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    padding: 0 0.5rem;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.carousel-button {
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: #0ff;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.carousel-button:hover {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.carousel-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
 }
