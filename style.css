@@ -12,7 +12,7 @@ html {
 .container {
     position: relative;
     min-height: 100vh;
-    background-image: url('img/blastro_neon_2.jpg');
+    background-image: url('img/blastro_live_4.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -38,10 +38,16 @@ html {
 .wrapper {
     width: 600px;
     max-width: 90%;
-    position: absolute;
-    top: 5vh;
+    position: fixed;
+    top: 47%;
+    /* Adjusted from 45% to move down slightly */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    height: 93vh;
+    /* Reduced from 95vh to create some margin */
+    justify-content: space-between;
 }
 
 .content {
@@ -52,7 +58,15 @@ html {
     margin: 0;
     border: none;
     overflow-y: auto;
-    height: 50vh;
+    height: calc(93vh - 120px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.content.visible {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Typography classes */
@@ -199,12 +213,15 @@ html {
 @media (max-width: 768px) {
     .container {
         background-attachment: scroll;
-        /* Better mobile performance */
+        background-size: 200%;
+        /* Changed from 'contain' to a percentage */
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-color: #000;
     }
 
     h1 {
         letter-spacing: 0.25rem;
-        /* Reduced letter spacing for mobile */
     }
 }
 
@@ -279,4 +296,18 @@ html {
 .carousel-button:disabled {
     opacity: 0.3;
     cursor: not-allowed;
+}
+
+/* Adjust menu for smaller screens */
+@media (max-width: 768px) {
+    .wrapper {
+        height: 90vh;
+        /* Adjusted from 92vh */
+    }
+
+    .content {
+        height: calc(90vh - 120px);
+    }
+
+    /* ... existing menu media query styles ... */
 }

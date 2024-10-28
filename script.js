@@ -1,70 +1,78 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Hide all sections initially except about
     const sections = document.querySelectorAll('.content-section');
-    sections.forEach(section => section.style.display = 'none');
-    document.getElementById('about').style.display = 'block';
+    const content = document.querySelector('.content');
+    let currentSection = null;
 
-    // Set initial active state for 'about' link
-    document.querySelector('a[href="#about"]').classList.add('active');
+    // Hide all sections initially
+    sections.forEach(section => section.style.display = 'none');
 
     // Add click handlers to navigation links
     document.querySelectorAll('.menu a').forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
-
-            // Remove active class from all links
-            document.querySelectorAll('.menu a').forEach(l => l.classList.remove('active'));
-
-            // Add active class to clicked link
-            this.classList.add('active');
-
-            // Hide all sections
-            sections.forEach(section => section.style.display = 'none');
-
-            // Show clicked section
             const sectionId = this.getAttribute('href').substring(1);
-            document.getElementById(sectionId).style.display = 'block';
+            const targetSection = document.getElementById(sectionId);
+
+            // Remove active class from all links and sections
+            document.querySelectorAll('.menu a').forEach(l => l.classList.remove('active'));
+            sections.forEach(section => {
+                section.classList.remove('active');
+                section.style.display = 'none';
+            });
+
+            // If clicking the same section that's currently open
+            if (currentSection === targetSection && content.classList.contains('visible')) {
+                // Hide content
+                content.classList.remove('visible');
+                this.classList.remove('active');
+                currentSection = null;
+            } else {
+                // Show new section
+                this.classList.add('active');
+                targetSection.style.display = 'block';
+                targetSection.classList.add('active');
+                content.classList.add('visible');
+                currentSection = targetSection;
+            }
         });
     });
 
     // Carousel functionality
-    document.addEventListener('DOMContentLoaded', () => {
-        const track = document.querySelector('.carousel-track');
-        const slides = Array.from(track.children);
-        const nextButton = document.querySelector('.carousel-button.next');
-        const prevButton = document.querySelector('.carousel-button.prev');
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.carousel-button.next');
+    const prevButton = document.querySelector('.carousel-button.prev');
 
-        let currentIndex = 0;
+    let currentIndex = 0;
 
-        // Set initial position
-        const updateSlidePosition = () => {
-            track.style.transform = `translateX(-${currentIndex * 100}%)`;
-            updateButtons();
-        };
+    // Set initial position
+    const updateSlidePosition = () => {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        updateButtons();
+    };
 
-        // Update button states
-        const updateButtons = () => {
-            prevButton.disabled = currentIndex === 0;
-            nextButton.disabled = currentIndex === slides.length - 1;
-        };
+    // Update button states
+    const updateButtons = () => {
+        prevButton.disabled = currentIndex === 0;
+        nextButton.disabled = currentIndex === slides.length - 1;
+    };
 
-        // Next button click
-        nextButton.addEventListener('click', () => {
-            if (currentIndex < slides.length - 1) {
-                currentIndex++;
-                updateSlidePosition();
-            }
-        });
-
-        // Previous button click
-        prevButton.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-                updateSlidePosition();
-            }
-        });
-
-        // Initialize carousel
-        updateSlidePosition();
+    // Next button click
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < slides.length - 1) {
+            currentIndex++;
+            updateSlidePosition();
+        }
     });
+
+    // Previous button click
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSlidePosition();
+        }
+    });
+
+    // Initialize carousel
+    updateSlidePosition();
 });
