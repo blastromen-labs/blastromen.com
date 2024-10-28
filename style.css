@@ -115,12 +115,18 @@ html {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
-    /* Changed from wrap to nowrap */
     gap: 1.5rem;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 1rem;
-    border-radius: 10px 10px 0 0;
     position: relative;
+    border-radius: 0;
+    /* Increased the angle cut from 20px to 40px */
+    clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 30px);
+}
+
+/* Optional: Add a hover effect to make the menu more interactive */
+.menu:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .menu a {
