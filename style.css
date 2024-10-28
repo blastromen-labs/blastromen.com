@@ -6,6 +6,7 @@ html {
     height: 100%;
     font-family: 'Share Tech Mono', monospace;
     color: #fff;
+    background-color: #000;
 }
 
 /* Container and background */
@@ -37,7 +38,8 @@ html {
 /* Base layout classes */
 .wrapper {
     width: 600px;
-    max-width: 90%;
+    max-width: 95%;
+    /* Increased from 90% to give more room */
     position: fixed;
     top: 47%;
     /* Adjusted from 45% to move down slightly */
@@ -56,12 +58,15 @@ html {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 0;
     margin: 0;
+    /* Ensure no margin */
     border: none;
     overflow-y: auto;
     height: calc(93vh - 120px);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    margin-top: -1px;
+    /* This will remove any sub-pixel rendering gap */
 }
 
 .content.visible {
@@ -112,54 +117,94 @@ html {
 
 /* Navigation */
 .menu {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 1.5rem;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 1rem;
     position: relative;
     border-radius: 0;
-    /* Increased the angle cut from 20px to 40px */
-    clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 30px);
+    clip-path: polygon(30px 0, 100% 0, 100% 100%, 0 100%, 0 30px);
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    /* Center the container */
 }
 
-/* Optional: Add a hover effect to make the menu more interactive */
-.menu:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.menu-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    width: 80%;
+    /* Make container narrower than navbar */
 }
 
 .menu a {
     color: #0ff;
-    font-size: clamp(0.7rem, 2.5vw, 1.1rem);
-    /* Adjusted font size */
-    padding: 0.5rem 0.2rem;
-    /* Reduced horizontal padding */
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
 .menu a:hover {
     color: #fff;
-    transform: scale(1.1);
 }
 
-.menu a.active {
-    color: #ff0000;
+.material-symbols-outlined {
+    display: block;
+    text-align: center;
 }
 
-/* Adjust menu for smaller screens */
+.menu-text {
+    display: block;
+    text-align: center;
+}
+
+/* Mobile adjustments */
 @media (max-width: 768px) {
     .menu {
-        gap: 0.5rem;
-        /* Reduced gap for mobile */
-        padding: 1rem 0.5rem;
-        /* Reduced horizontal padding */
+        padding: 0.5rem;
+    }
+
+    .menu-container {
+        width: 80%;
+        /* Slightly wider on mobile but still contained */
+        gap: 0.2rem;
+        justify-content: space-between;
     }
 
     .menu a {
-        padding: 0.5rem 0.1rem;
-        /* Further reduced padding */
+        font-size: 0.55rem;
+    }
+
+    .material-symbols-outlined {
+        font-size: 0.9rem;
+    }
+
+    .menu-item {
+        gap: 0.1rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+    .menu-container {
+        width: 98%;
+        /* Almost full width for very small screens */
+        gap: 0.1rem;
+    }
+
+    .menu a {
+        font-size: 0.5rem;
+    }
+
+    .material-symbols-outlined {
+        font-size: 0.8rem;
     }
 }
 
@@ -304,16 +349,15 @@ html {
     cursor: not-allowed;
 }
 
-/* Adjust menu for smaller screens */
-@media (max-width: 768px) {
-    .wrapper {
-        height: 90vh;
-        /* Adjusted from 92vh */
-    }
+/* Navigation active states */
+.menu a.active {
+    color: #ff0000;
+}
 
-    .content {
-        height: calc(90vh - 120px);
-    }
+.menu a.active:hover {
+    color: #ff0000;
+}
 
-    /* ... existing menu media query styles ... */
+.menu a:hover {
+    color: #fff;
 }
